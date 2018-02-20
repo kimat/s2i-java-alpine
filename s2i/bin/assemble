@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
+  echo "Restoring build artifacts"
+  # mv /tmp/artifacts/* $HOME/.
+  mv /tmp/artifacts/* ./
+fi
+
+shopt -s dotglob
+echo "---> Installing application source ..."
+mv /tmp/src/* ./
+
+echo "---> Building your Java application from source ..."
+chmod +x gradlew
+./gradlew build
