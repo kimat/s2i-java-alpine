@@ -7,10 +7,10 @@
 # For more information see the documentation:
 #	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
 #
-pushd ${HOME} >/dev/null
+pushd /root >/dev/null
 if [ -d build ]; then
     # all deps contents to tar stream
-    tar cf - /root/.gradle
+    tar cf - .gradle
 fi
 popd >/dev/null
 
