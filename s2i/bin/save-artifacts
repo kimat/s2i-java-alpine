@@ -10,7 +10,7 @@
 pushd ${HOME} >/dev/null
 if [ -d build ]; then
     # all deps contents to tar stream
-    tar cf - build /root/.gradle
+    tar cf - /root/.gradle
 fi
 popd >/dev/null
 

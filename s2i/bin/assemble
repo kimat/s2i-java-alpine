@@ -2,9 +2,7 @@
 
 if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
   echo "Restoring build artifacts && caches"
-  # mv /tmp/artifacts/* $HOME/.
-  mv /tmp/artifacts/build ./
-  mv /tmp/artifacts/root/.gradle /root/
+  mv /tmp/artifacts/root/.gradle /root
 fi
 
 shopt -s dotglob
